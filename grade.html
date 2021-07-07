@@ -1,0 +1,93 @@
+#include<iostream>
+    /********************************************************************************************************************************************************************************************
+    *****************THIS IS A GRADING SYSTEM********AUTHOUR:Brighton .K. Barevo and Susan Shiko**********DATE: June 2021***************************************************************************/
+    using namespace std;
+     int main()
+     {
+         int CW, WE, percent;
+         bool loop1;
+         cout<<"welcome "<<endl;
+         loop1 = true;
+         do
+         {
+             /*this code is there to prompt the user to input the student coursework assessments which they add up to 50*/
+            cout<<"what did you score in your coursework?"<<endl;
+            cin>>CW;
+            if(CW>51 || CW<0)
+            {
+                /*This conditions and statements ensure that the user enters the corrects values since neither coursework total mark nor written exam total mark is above 50 mark*/
+                cout<<"invalid entry !!!!!!!!!!!!!!!!  TRY AGAIN"<<endl;
+                if(CW==-1)
+                {
+                    break;
+                }
+            }
+            else
+            {
+                break;
+            }
+         }
+         while(loop1== true);
+         do
+         {
+             /*this code is there to prompt the user to input the student written examination assessment which also is out of 50*/
+            cout<<"what did you score in your written examinations?"<<endl;
+            cin>>WE;
+            if(WE>51 || WE<0)
+            {
+                cout<<"invalid entry !!!!!!!!!!!!!!!!  TRY AGAIN"<<endl;
+                if(WE==-1)
+                {
+                    break;
+                }
+            }
+            else
+            {
+                break;
+            }
+         }
+         while(loop1== true);
+         /*this code outputs the student summasation of the coursework and the written exam and determines the final mark*/
+         percent= CW+WE;
+         cout<<"final percent is: \n *********** "<<percent;
+         /*this code outputs the student grade after any moderations */
+         if(percent>0)
+         {
+             if(CW<15 || WE<15)
+                 {
+                    cout<<" \n you failed , your grade is: \n *************   F   "<<endl;
+                 }
+            else if(CW>15 || WE>15)
+                {
+                    cout<<" \n you passed , your grade is: \n *************  D  "<<endl;
+                }
+            else
+            {
+                if(percent<=39)
+                {
+                    cout<<" \n your grade is: \n ************  F   "<<endl;
+                }
+                else if(percent>=40 && percent<=49)
+                {
+                    cout<<" \n  you passed , your grade is: \n ************ D   "<<endl;
+                }
+                else if(percent>=50 && percent<=59)
+                {
+                    cout<<" \n you passed , your grade is: \n *********** C  "<<endl;
+                }
+                else if(percent>=60 && percent<=69)
+                {
+                    cout<<" \n you passed , your grade is: \n *********** B  "<<endl;
+                }
+                else if(percent>=70 && percent<=100)
+                {
+                    cout<<" \n you passed , your grade is: \n *********** A  "<<endl;
+                }
+            }
+         }
+         else
+         {
+             cout<<"\n";
+             cout<<"goodbye"<<endl;
+         }
+     }
