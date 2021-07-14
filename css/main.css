@@ -1,0 +1,19 @@
+body{
+    font-size: 1.2em;
+}
+nav{
+    background-color: rgb(0, 0, 0);
+    line-height:3em ;
+}
+nav.a{
+    color:brown;
+}
+header{
+    background-color: chartreuse;
+}
+a{
+    text-decoration: none;
+}
+footer ul{
+    list-style-type: decimal;
+}
